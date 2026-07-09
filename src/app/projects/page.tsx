@@ -57,7 +57,7 @@ const projects = [
       "Tested on Kali Linux and Garuda Linux environments",
     ],
     tags: ["Python", "Linux", "iptables", "CLI", "Security Automation"],
-    github: "https://github.com/jamesgichia/firewall-rules-optimizer",
+    github: "https://github.com/jamesgichia/firewall_rules_optimizer",
     live: null,
   },
   {

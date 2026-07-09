@@ -207,7 +207,7 @@ export default function HomePage() {
               statusColor: "green",
               desc: "Python CLI tool that analyses and optimises iptables firewall rule sets on Linux — reducing processing overhead while preserving security intent.",
               tags: ["Python", "Linux", "iptables", "Security"],
-              github: "https://github.com/jamesgichia/firewall-rules-optimizer",
+              github: "https://github.com/jamesgichia/firewall_rules_optimizer",
             },
           ].map(({ title, status, statusColor, desc, tags, github }) => (
             <div key={title} className="card" style={{ padding: "28px", display: "flex", flexDirection: "column" }}>
