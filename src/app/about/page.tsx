@@ -92,7 +92,7 @@ export default function AboutPage() {
                 "Cisco — Networking Fundamentals",
               ].map((cert) => (
                 <div key={cert} className="card" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "12px" }}>
-                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--purple-500)", flexShrink: 0 }} />
+                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--green-500)", flexShrink: 0 }} />
                   <span style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>{cert}</span>
                 </div>
               ))}

@@ -2,13 +2,22 @@
 
 @import "tailwindcss";
 
-/* ── Shared accent colours (Gold + Chocolate) ── */
+/* ── Accent colours: Gold (primary) + Green (secondary) ── */
 :root {
-  --purple-400: #E8C54A;  /* bright gold */
-  --purple-500: #C9A227;  /* medium gold */
-  --purple-600: #A07B18;  /* deep gold   */
-  --purple-700: #7A5C10;  /* dark gold   */
+  --gold-400: #E8C54A;    /* bright gold  */
+  --gold-500: #C9A227;    /* medium gold  */
+  --gold-600: #A07B18;    /* deep gold    */
+  --gold-700: #7A5C10;    /* darkest gold */
+  --green-400: #4ADE80;   /* bright green */
+  --green-500: #22C55E;   /* medium green */
+  --green-600: #16A34A;   /* deep green   */
+  /* Keep --purple-* as aliases so existing code still compiles */
+  --purple-400: var(--gold-400);
+  --purple-500: var(--gold-500);
+  --purple-600: var(--gold-600);
+  --purple-700: var(--gold-700);
   --glow: rgba(201, 162, 39, 0.35);
+  --glow-green: rgba(34, 197, 94, 0.25);
 }
 
 /* ── Dark theme — chocolate + gold ── */
@@ -32,9 +41,10 @@
   --tag-green-bg: rgba(34, 197, 94, 0.1);
   --tag-green-color: #4ade80;
   --tag-green-border: rgba(34, 197, 94, 0.25);
-  --tag-blue-bg: rgba(59, 130, 246, 0.1);
-  --tag-blue-color: #60a5fa;
-  --tag-blue-border: rgba(59, 130, 246, 0.25);
+  /* "In Development" badge → amber-gold instead of blue */
+  --tag-blue-bg: rgba(201, 162, 39, 0.12);
+  --tag-blue-color: #E8C54A;
+  --tag-blue-border: rgba(201, 162, 39, 0.3);
 }
 
 /* ── Light theme — warm cream + gold ── */
@@ -57,9 +67,10 @@
   --tag-green-bg: rgba(22, 163, 74, 0.08);
   --tag-green-color: #16a34a;
   --tag-green-border: rgba(22, 163, 74, 0.3);
-  --tag-blue-bg: rgba(37, 99, 235, 0.08);
-  --tag-blue-color: #2563eb;
-  --tag-blue-border: rgba(37, 99, 235, 0.3);
+  /* "In Development" badge → darker amber-gold for light bg */
+  --tag-blue-bg: rgba(160, 123, 24, 0.1);
+  --tag-blue-color: #8B6914;
+  --tag-blue-border: rgba(160, 123, 24, 0.28);
 }
 
 * {
@@ -226,7 +237,7 @@ code, pre {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--purple-400);
+  color: var(--green-500);
   margin-bottom: 8px;
 }
 
@@ -277,8 +288,8 @@ code, pre {
 .timeline-dot {
   width: 12px; height: 12px;
   border-radius: 50%;
-  background: var(--purple-500);
-  box-shadow: 0 0 12px var(--purple-500);
+  background: var(--green-500);
+  box-shadow: 0 0 12px var(--green-500);
   flex-shrink: 0;
   margin-top: 4px;
 }

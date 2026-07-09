@@ -85,7 +85,7 @@ export default function SkillsPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "32px" }}>
           {skillGroups.map(({ category, skills }) => (
             <div key={category}>
-              <h2 style={{ fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--purple-400)", marginBottom: "20px" }}>
+              <h2 style={{ fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--green-500)", marginBottom: "20px" }}>
                 {category}
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -95,14 +95,15 @@ export default function SkillsPage() {
                       <span style={{ fontSize: "0.88rem", color: "var(--text-primary)", fontWeight: 500 }}>{name}</span>
                       <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>{level}%</span>
                     </div>
-                    <div style={{ height: "6px", background: "rgba(139,92,246,0.1)", borderRadius: "3px", overflow: "hidden", border: "1px solid rgba(139,92,246,0.1)" }}>
+                    <div style={{ height: "7px", background: "rgba(201,162,39,0.12)", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(201,162,39,0.15)" }}>
                       <div
                         style={{
                           height: "100%",
                           width: `${level}%`,
-                          background: "linear-gradient(90deg, #7c3aed, #a78bfa)",
-                          borderRadius: "3px",
+                          background: "linear-gradient(90deg, #A07B18, #C9A227, #22C55E)",
+                          borderRadius: "4px",
                           transition: "width 1s ease",
+                          boxShadow: "0 0 8px rgba(201,162,39,0.4)",
                         }}
                       />
                     </div>

@@ -33,7 +33,7 @@ export default function FloatingWhatsApp() {
       {/* Tooltip label */}
       <span
         style={{
-          background: "var(--purple-700, #6d28d9)",
+          background: "#7A5C10",
           color: "#fff",
           fontSize: "0.8rem",
           fontWeight: 600,
