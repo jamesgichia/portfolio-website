@@ -77,7 +77,7 @@ export default function HomePage() {
             I build <strong style={{ color: "var(--text-primary)" }}>full-stack web applications</strong> with
             Django and Next.js, with a specialisation in{" "}
             <strong style={{ color: "var(--purple-400)" }}>application security</strong>. Currently
-            building WebGuard and tuSupport while finishing my CS degree in Kenya.
+            building personal projects.
           </p>
 
           {/* CTA buttons */}
