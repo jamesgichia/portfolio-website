@@ -7,7 +7,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 export const metadata: Metadata = {
   title: "James Gichia — Software Engineer & Security Enthusiast",
   description:
-    "Portfolio of James Gichia — Full-Stack Software Engineer specialising in Django, Next.js, and application security. Based in Ruiru, Nairobi, Kenya.",
+    "Portfolio of James Gichia — Full-Stack Software Engineer specialising in Django, Next.js, and application security. Based in Ruiru, Kenya.",
   keywords: [
     "James Gichia",
     "Software Engineer",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "James Gichia — Software Engineer",
-    description: "Full-Stack Web Apps & Application Security. Based in Ruiru, Nairobi, Kenya.",
+    description: "Full-Stack Web Apps & Application Security. Based in Ruiru, Kenya.",
     type: "website",
     url: "https://jamesgichia.vercel.app",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "James Gichia — Software Engineer",
-    description: "Full-Stack Web Apps & Application Security. Based in Ruiru, Nairobi, Kenya.",
+    description: "Full-Stack Web Apps & Application Security. Based in Ruiru, Kenya.",
     images: ["https://jamesgichia.vercel.app/og-image.png"],
   },
 };
@@ -88,7 +88,7 @@ export default function RootLayout({
               deployed on Vercel.
             </p>
             <p style={{ marginTop: "6px", color: "var(--purple-400)" }}>
-              Ruiru, Nairobi, Kenya 🇰🇪
+              Ruiru, Kenya 🇰🇪
             </p>
           </footer>
         </ThemeProvider>

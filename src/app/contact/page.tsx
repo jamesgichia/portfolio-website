@@ -36,7 +36,7 @@ export default function ContactPage() {
               {
                 icon: <MapPin size={20} color="var(--purple-400)" />,
                 label: "Location",
-                value: "Ruiru, Nairobi, Kenya",
+                value: "Ruiru, Kenya",
                 href: null,
               },
               {
