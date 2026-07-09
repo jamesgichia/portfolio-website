@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Terminal, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
+import SmartEmailLink from "@/components/SmartEmailLink";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -102,15 +103,13 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=jamesgichia15@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <SmartEmailLink
+            subject="Let's work together"
             className="btn-primary"
             style={{ padding: "8px 18px", fontSize: "0.85rem" }}
           >
             Hire Me
-          </a>
+          </SmartEmailLink>
           {/* Theme toggle */}
           <button
             onClick={toggle}
@@ -191,9 +190,13 @@ export default function Navbar() {
             </Link>
           ))}
           <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-            <a href="https://mail.google.com/mail/?view=cm&to=jamesgichia15@gmail.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ width: "fit-content" }}>
+            <SmartEmailLink
+              subject="Let's work together"
+              className="btn-primary"
+              style={{ width: "fit-content" }}
+            >
               Hire Me
-            </a>
+            </SmartEmailLink>
             <button
               onClick={toggle}
               aria-label="Toggle theme"

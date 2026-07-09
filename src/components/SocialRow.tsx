@@ -1,9 +1,12 @@
 "use client";
-
+import React from "react";
 import { GithubIcon, LinkedinIcon } from "@/components/GithubIcon";
 import { Mail } from "lucide-react";
+import SmartEmailLink from "@/components/SmartEmailLink";
 
-const socials = [
+const EMAIL = "jamesgichia15@gmail.com";
+
+const nonEmailSocials = [
   {
     href: "https://github.com/jamesgichia",
     icon: (hovered: boolean) => <GithubIcon size={20} color={hovered ? "var(--purple-400)" : "var(--text-muted)"} />,
@@ -14,11 +17,6 @@ const socials = [
     icon: (hovered: boolean) => <LinkedinIcon size={20} color={hovered ? "var(--purple-400)" : "var(--text-muted)"} />,
     label: "LinkedIn",
   },
-  {
-    href: "https://mail.google.com/mail/?view=cm&to=jamesgichia15@gmail.com",
-    icon: (hovered: boolean) => <Mail size={20} color={hovered ? "var(--purple-400)" : "var(--text-muted)"} />,
-    label: "Email",
-  },
 ];
 
 export function SocialRow() {
@@ -28,22 +26,18 @@ export function SocialRow() {
         Connect
       </span>
       <div style={{ width: "40px", height: "1px", background: "var(--border)" }} />
-      {socials.map(({ href, icon, label }) => (
+
+      {nonEmailSocials.map(({ href, icon, label }) => (
         <SocialLink key={label} href={href} label={label} icon={icon} />
       ))}
+
+      {/* Smart email link — native app first, Gmail fallback */}
+      <EmailIconLink />
     </div>
   );
 }
 
-function SocialLink({
-  href,
-  label,
-  icon,
-}: {
-  href: string;
-  label: string;
-  icon: (hovered: boolean) => React.ReactNode;
-}) {
+function SocialLink({ href, label, icon }: { href: string; label: string; icon: (hovered: boolean) => React.ReactNode }) {
   const [hovered, setHovered] = React.useState(false);
   return (
     <a
@@ -60,5 +54,16 @@ function SocialLink({
   );
 }
 
-// Need React import for useState
-import React from "react";
+function EmailIconLink() {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <SmartEmailLink
+      aria-label="Email"
+      style={{ display: "flex" }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <Mail size={20} color={hovered ? "var(--purple-400)" : "var(--text-muted)"} />
+    </SmartEmailLink>
+  );
+}

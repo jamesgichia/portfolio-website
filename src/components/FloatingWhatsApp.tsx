@@ -44,7 +44,7 @@ export default function FloatingWhatsApp() {
           transform: hovered ? "translateX(0)" : "translateX(10px)",
           transition: "opacity 0.2s ease, transform 0.2s ease",
           pointerEvents: "none",
-          boxShadow: "0 4px 16px rgba(109,40,217,0.35)",
+          boxShadow: "0 4px 16px rgba(160,123,24,0.4)",
         }}
       >
         Chat on WhatsApp
@@ -56,13 +56,13 @@ export default function FloatingWhatsApp() {
           width: "56px",
           height: "56px",
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #7c3aed, #a78bfa)",
+          background: "linear-gradient(135deg, #A07B18, #E8C54A)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           boxShadow: hovered
-            ? "0 8px 32px rgba(139, 92, 246, 0.6)"
-            : "0 4px 20px rgba(139, 92, 246, 0.4)",
+            ? "0 8px 32px rgba(201, 162, 39, 0.65)"
+            : "0 4px 20px rgba(201, 162, 39, 0.4)",
           transition: "box-shadow 0.2s ease",
           flexShrink: 0,
           position: "relative",
@@ -74,7 +74,7 @@ export default function FloatingWhatsApp() {
             position: "absolute",
             inset: 0,
             borderRadius: "50%",
-            border: "2px solid rgba(139, 92, 246, 0.6)",
+            border: "2px solid rgba(201, 162, 39, 0.7)",
             animation: "wa-pulse 2s ease-out infinite",
           }}
         />

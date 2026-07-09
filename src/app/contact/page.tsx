@@ -1,6 +1,7 @@
 "use client";
 import { GithubIcon, LinkedinIcon } from "@/components/GithubIcon";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import SmartEmailLink from "@/components/SmartEmailLink";
 
 export default function ContactPage() {
   return (
@@ -25,7 +26,7 @@ export default function ContactPage() {
                 icon: <Mail size={20} color="var(--purple-400)" />,
                 label: "Email",
                 value: "jamesgichia15@gmail.com",
-                href: "https://mail.google.com/mail/?view=cm&to=jamesgichia15@gmail.com",
+                href: "smart-email",
               },
               {
                 icon: <Phone size={20} color="var(--purple-400)" />,
@@ -55,9 +56,9 @@ export default function ContactPage() {
               <div key={label} className="card" style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: "14px" }}>
                 <div style={{
                   width: "42px", height: "42px", borderRadius: "10px",
-                  background: "rgba(139,92,246,0.1)",
+                  background: "rgba(201,162,39,0.1)",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  border: "1px solid rgba(139,92,246,0.2)", flexShrink: 0,
+                  border: "1px solid rgba(201,162,39,0.22)", flexShrink: 0,
                 }}>
                   {icon}
                 </div>
@@ -65,7 +66,16 @@ export default function ContactPage() {
                   <p style={{ color: "var(--text-muted)", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "2px" }}>
                     {label}
                   </p>
-                  {href ? (
+                  {label === "Email" ? (
+                    <SmartEmailLink
+                      subject="Let's collaborate"
+                      style={{ color: "var(--text-primary)", textDecoration: "none", fontSize: "0.9rem", fontWeight: 500 }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--purple-400)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
+                    >
+                      {value}
+                    </SmartEmailLink>
+                  ) : href ? (
                     <a
                       href={href}
                       target={href.startsWith("http") ? "_blank" : undefined}
@@ -98,8 +108,8 @@ export default function ContactPage() {
             <div style={{
               padding: "16px",
               borderRadius: "10px",
-              background: "rgba(139,92,246,0.07)",
-              border: "1px dashed rgba(139,92,246,0.25)",
+              background: "rgba(201,162,39,0.07)",
+              border: "1px dashed rgba(201,162,39,0.28)",
               fontFamily: "Fira Code, monospace",
               fontSize: "0.85rem",
               color: "var(--purple-400)",
@@ -108,14 +118,14 @@ export default function ContactPage() {
               <span style={{ color: "var(--text-muted)" }}>To:</span> jamesgichia15@gmail.com<br />
               <span style={{ color: "var(--text-muted)" }}>Subject:</span> Let&apos;s collaborate 🚀
             </div>
-            <a
-              href="https://mail.google.com/mail/?view=cm&to=jamesgichia15@gmail.com&su=Let's collaborate"
+            <SmartEmailLink
+              subject="Let's collaborate"
               className="btn-primary"
               id="contact-email-btn"
               style={{ width: "fit-content" }}
             >
               <Mail size={16} /> Send Email
-            </a>
+            </SmartEmailLink>
 
             {/* Availability */}
             <div style={{
