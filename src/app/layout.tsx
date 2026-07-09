@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | James Gichia",
   },
   verification: {
-    google: "google2ba3c4578ae13e72",
+    google: "nWu3pWgI2kvz27PkI7SXqdYl3ZaVt0pRk9dJl2XOfQA",
   },
   description:
     "Portfolio of James Gichia — Full-Stack Software Engineer specialising in Django, Next.js, and application security. Based in Ruiru, Kenya.",
