@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
   title: "James Gichia — Software Engineer & Security Enthusiast",
@@ -68,6 +69,7 @@ export default function RootLayout({
 
           <Navbar />
           <main style={{ position: "relative", zIndex: 1 }}>{children}</main>
+          <FloatingWhatsApp />
 
           <footer
             style={{
