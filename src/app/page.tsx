@@ -145,12 +145,12 @@ export default function HomePage() {
                   width: "52px",
                   height: "52px",
                   borderRadius: "12px",
-                  background: "rgba(201,162,39,0.1)",
+                  background: "rgba(22,101,52,0.12)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   marginBottom: "20px",
-                  border: "1px solid rgba(201,162,39,0.22)",
+                  border: "1px solid rgba(22,101,52,0.22)",
                 }}
               >
                 {icon}

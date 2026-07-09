@@ -56,9 +56,9 @@ export default function ContactPage() {
               <div key={label} className="card" style={{ padding: "18px 20px", display: "flex", alignItems: "center", gap: "14px" }}>
                 <div style={{
                   width: "42px", height: "42px", borderRadius: "10px",
-                  background: "rgba(201,162,39,0.1)",
+                  background: "rgba(22,101,52,0.12)",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  border: "1px solid rgba(201,162,39,0.22)", flexShrink: 0,
+                  border: "1px solid rgba(22,101,52,0.2)", flexShrink: 0,
                 }}>
                   {icon}
                 </div>
@@ -108,8 +108,8 @@ export default function ContactPage() {
             <div style={{
               padding: "16px",
               borderRadius: "10px",
-              background: "rgba(201,162,39,0.07)",
-              border: "1px dashed rgba(201,162,39,0.28)",
+              background: "rgba(22,101,52,0.07)",
+              border: "1px dashed rgba(22,101,52,0.3)",
               fontFamily: "Fira Code, monospace",
               fontSize: "0.85rem",
               color: "var(--purple-400)",

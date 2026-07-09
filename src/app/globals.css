@@ -2,75 +2,76 @@
 
 @import "tailwindcss";
 
-/* ── Accent colours: Gold (primary) + Green (secondary) ── */
+/* ── "Old Money" Palette: Antique Gold + Forest Green ── */
 :root {
-  --gold-400: #E8C54A;    /* bright gold  */
-  --gold-500: #C9A227;    /* medium gold  */
-  --gold-600: #A07B18;    /* deep gold    */
-  --gold-700: #7A5C10;    /* darkest gold */
-  --green-400: #4ADE80;   /* bright green */
-  --green-500: #22C55E;   /* medium green */
-  --green-600: #16A34A;   /* deep green   */
-  /* Keep --purple-* as aliases so existing code still compiles */
+  --gold-400: #E8C84A;    /* bright champagne gold  */
+  --gold-500: #C9A227;    /* antique gold           */
+  --gold-600: #9A7820;    /* aged gold              */
+  --gold-700: #7A6018;    /* dark antique gold      */
+  --green-400: #4ADE80;   /* bright emerald         */
+  --green-500: #22C55E;   /* medium emerald         */
+  --green-600: #16A34A;   /* forest green           */
+  --green-700: #0F7A38;   /* deep forest            */
+  /* Aliases so existing var(--purple-*) refs resolve to gold */
   --purple-400: var(--gold-400);
   --purple-500: var(--gold-500);
   --purple-600: var(--gold-600);
   --purple-700: var(--gold-700);
-  --glow: rgba(201, 162, 39, 0.35);
-  --glow-green: rgba(34, 197, 94, 0.25);
+  --glow:       rgba(201, 162, 39, 0.4);
+  --glow-green: rgba(34,  197, 94, 0.3);
 }
 
-/* ── Dark theme — chocolate + gold ── */
+/* ── Dark Mode — British Racing Green + Antique Gold ── */
 :root,
 [data-theme="dark"] {
-  --bg-primary: #160800;
-  --bg-secondary: #1E0E03;
-  --bg-card: #251207;
-  --bg-card-hover: #301A0A;
-  --bg-nav: rgba(22, 8, 0, 0.88);
-  --border: rgba(201, 162, 39, 0.18);
-  --border-hover: rgba(201, 162, 39, 0.48);
-  --text-primary: #FFF4DC;
-  --text-secondary: #C4A882;
-  --text-muted: #7A5E3A;
-  --blob-opacity: 0.10;
-  --scrollbar-thumb: var(--purple-600);
-  --tag-bg: rgba(201, 162, 39, 0.12);
-  --tag-color: var(--purple-400);
-  --tag-border: rgba(201, 162, 39, 0.28);
-  --tag-green-bg: rgba(34, 197, 94, 0.1);
-  --tag-green-color: #4ade80;
-  --tag-green-border: rgba(34, 197, 94, 0.25);
-  /* "In Development" badge → amber-gold instead of blue */
-  --tag-blue-bg: rgba(201, 162, 39, 0.12);
-  --tag-blue-color: #E8C54A;
-  --tag-blue-border: rgba(201, 162, 39, 0.3);
+  --bg-primary:    #080E09;          /* near-black forest          */
+  --bg-secondary:  #0D1A0F;          /* deep forest                */
+  --bg-card:       #122017;          /* forest card                */
+  --bg-card-hover: #192C1E;          /* hover, slightly lighter    */
+  --bg-nav:        rgba(8, 14, 9, 0.92);
+  --border:        rgba(201, 162, 39, 0.14);
+  --border-hover:  rgba(201, 162, 39, 0.44);
+  --text-primary:  #F2EDD8;          /* antique ivory              */
+  --text-secondary:#A8BEA0;          /* muted sage                 */
+  --text-muted:    #4E6A54;          /* dark sage                  */
+  --blob-opacity:  0.12;
+  --scrollbar-thumb: var(--gold-600);
+  --tag-bg:        rgba(201, 162, 39, 0.11);
+  --tag-color:     var(--gold-400);
+  --tag-border:    rgba(201, 162, 39, 0.28);
+  --tag-green-bg:  rgba(34, 197, 94, 0.10);
+  --tag-green-color: #4ADE80;
+  --tag-green-border: rgba(34, 197, 94, 0.28);
+  /* "In Development" → amber-gold */
+  --tag-blue-bg:   rgba(201, 162, 39, 0.11);
+  --tag-blue-color: #E8C84A;
+  --tag-blue-border: rgba(201, 162, 39, 0.28);
 }
 
-/* ── Light theme — warm cream + gold ── */
+/* ── Light Mode — Parchment / Ivory + Forest Green ── */
 [data-theme="light"] {
-  --bg-primary: #FDF8ED;
-  --bg-secondary: #F5ECCA;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #FFF8E0;
-  --bg-nav: rgba(253, 248, 237, 0.92);
-  --border: rgba(160, 123, 24, 0.2);
-  --border-hover: rgba(160, 123, 24, 0.52);
-  --text-primary: #1A0900;
-  --text-secondary: #4A2C10;
-  --text-muted: #8A6040;
-  --blob-opacity: 0.06;
-  --scrollbar-thumb: var(--purple-500);
-  --tag-bg: rgba(160, 123, 24, 0.09);
-  --tag-color: #8B6914;
-  --tag-border: rgba(160, 123, 24, 0.28);
-  --tag-green-bg: rgba(22, 163, 74, 0.08);
-  --tag-green-color: #16a34a;
+  --bg-primary:    #F7F4E8;          /* antique parchment          */
+  --bg-secondary:  #EDF0E2;          /* light sage                 */
+  --bg-card:       #FFFFFF;
+  --bg-card-hover: #F2F6EC;          /* very light sage            */
+  --bg-nav:        rgba(247, 244, 232, 0.94);
+  --border:        rgba(22, 101, 52, 0.15);  /* forest green border  */
+  --border-hover:  rgba(22, 101, 52, 0.42);
+  --text-primary:  #0A1A0D;          /* deep forest (readable)     */
+  --text-secondary:#2D4A36;          /* medium forest              */
+  --text-muted:    #5A7A62;          /* sage                       */
+  --blob-opacity:  0.07;
+  --scrollbar-thumb: var(--gold-500);
+  --tag-bg:        rgba(154, 120, 32, 0.09);
+  --tag-color:     #7A6018;
+  --tag-border:    rgba(154, 120, 32, 0.28);
+  --tag-green-bg:  rgba(22, 163, 74, 0.08);
+  --tag-green-color: #15803D;
   --tag-green-border: rgba(22, 163, 74, 0.3);
-  /* "In Development" badge → darker amber-gold for light bg */
-  --tag-blue-bg: rgba(160, 123, 24, 0.1);
-  --tag-blue-color: #8B6914;
-  --tag-blue-border: rgba(160, 123, 24, 0.28);
+  /* "In Development" → amber-gold */
+  --tag-blue-bg:   rgba(154, 120, 32, 0.09);
+  --tag-blue-color: #7A6018;
+  --tag-blue-border: rgba(154, 120, 32, 0.28);
 }
 
 * {
@@ -94,8 +95,8 @@ code, pre {
 }
 
 ::selection {
-  background: rgba(201, 162, 39, 0.35);
-  color: #1A0900;
+  background: rgba(201, 162, 39, 0.30);
+  color: #0A1A0D;
 }
 
 /* Scrollbar */
@@ -109,7 +110,7 @@ code, pre {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #E8C54A 0%, #A07B18 50%, #F0D060 100%);
+  background: linear-gradient(135deg, #E8C84A 0%, #9A7820 45%, #C9A227 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -141,14 +142,14 @@ code, pre {
 
 .bg-blob-1 {
   width: 600px; height: 600px;
-  background: radial-gradient(circle, #A07B18, transparent);
+  background: radial-gradient(circle, #9A7820, transparent);
   top: -200px; left: -200px;
   animation: float1 20s ease-in-out infinite;
 }
 
 .bg-blob-2 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, #E8C54A, transparent);
+  background: radial-gradient(circle, #0F7A38, transparent);
   bottom: -100px; right: -100px;
   animation: float2 25s ease-in-out infinite;
 }
