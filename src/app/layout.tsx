@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     "Kenya",
   ],
   authors: [{ name: "James Gichia" }],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "James Gichia — Software Engineer",
     description: "Building secure, full-stack web applications.",
