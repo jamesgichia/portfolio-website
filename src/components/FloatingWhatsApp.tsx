@@ -33,7 +33,7 @@ export default function FloatingWhatsApp() {
       {/* Tooltip label */}
       <span
         style={{
-          background: "#075E54",
+          background: "var(--purple-700, #6d28d9)",
           color: "#fff",
           fontSize: "0.8rem",
           fontWeight: 600,
@@ -44,7 +44,7 @@ export default function FloatingWhatsApp() {
           transform: hovered ? "translateX(0)" : "translateX(10px)",
           transition: "opacity 0.2s ease, transform 0.2s ease",
           pointerEvents: "none",
-          boxShadow: "0 4px 16px rgba(7,94,84,0.3)",
+          boxShadow: "0 4px 16px rgba(109,40,217,0.35)",
         }}
       >
         Chat on WhatsApp
@@ -56,13 +56,13 @@ export default function FloatingWhatsApp() {
           width: "56px",
           height: "56px",
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #25D366, #128C7E)",
+          background: "linear-gradient(135deg, #7c3aed, #a78bfa)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           boxShadow: hovered
-            ? "0 8px 32px rgba(37, 211, 102, 0.6)"
-            : "0 4px 20px rgba(37, 211, 102, 0.4)",
+            ? "0 8px 32px rgba(139, 92, 246, 0.6)"
+            : "0 4px 20px rgba(139, 92, 246, 0.4)",
           transition: "box-shadow 0.2s ease",
           flexShrink: 0,
           position: "relative",
@@ -74,7 +74,7 @@ export default function FloatingWhatsApp() {
             position: "absolute",
             inset: 0,
             borderRadius: "50%",
-            border: "2px solid rgba(37, 211, 102, 0.6)",
+            border: "2px solid rgba(139, 92, 246, 0.6)",
             animation: "wa-pulse 2s ease-out infinite",
           }}
         />
