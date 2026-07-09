@@ -43,7 +43,7 @@ export default function HomePage() {
             </span>
             <span className="tag" style={{ display: "flex", alignItems: "center", gap: "4px" }}>
               <MapPin size={11} />
-              Nairobi, Kenya
+              Ruiru, Nairobi, Kenya
             </span>
           </div>
 
