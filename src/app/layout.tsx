@@ -25,8 +25,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "James Gichia — Software Engineer",
-    description: "Building secure, full-stack web applications.",
+    description: "Full-Stack Web Apps & Application Security. Based in Nairobi, Kenya.",
     type: "website",
+    url: "https://jamesgichia.vercel.app",
+    images: [
+      {
+        url: "https://jamesgichia.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "James Gichia — Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "James Gichia — Software Engineer",
+    description: "Full-Stack Web Apps & Application Security. Based in Nairobi, Kenya.",
+    images: ["https://jamesgichia.vercel.app/og-image.png"],
   },
 };
 
