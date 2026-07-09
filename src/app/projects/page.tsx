@@ -2,8 +2,8 @@ import { GithubIcon } from "@/components/GithubIcon";
 import { ExternalLink } from "lucide-react";
 
 export const metadata = {
-  title: "Projects — James Gichia",
-  description: "Portfolio of projects by James Gichia — including WebGuard, tuSupport, and Firewall Rules Optimizer.",
+  title: "Projects",
+  description: "Portfolio projects by James Gichia — WebGuard (automated security scanner), tuSupport (multi-tenant SaaS), and Firewall Rules Optimizer. Django, Next.js, Python.",
 };
 
 const projects = [

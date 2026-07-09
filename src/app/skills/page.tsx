@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Skills — James Gichia",
-  description: "Technical skills of James Gichia — Python, Django, Next.js, security tools, and more.",
+  title: "Skills",
+  description: "Technical skills of James Gichia — Python, Django, Next.js, PostgreSQL, Docker, OWASP security testing, Burp Suite, and more.",
 };
 
 const skillGroups = [

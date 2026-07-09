@@ -1,8 +1,8 @@
 import { GraduationCap, Briefcase, Award, Users } from "lucide-react";
 
 export const metadata = {
-  title: "About — James Gichia",
-  description: "Learn about James Gichia — Computer Science student, software engineer, and security enthusiast based in Ruiru, Kenya.",
+  title: "About",
+  description: "Learn about James Gichia — CS student at Mama Ngina University, ICT Authority intern, Cisco-certified, and security researcher based in Ruiru, Kenya.",
 };
 
 export default function AboutPage() {
