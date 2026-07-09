@@ -61,21 +61,12 @@ export const metadata: Metadata = {
     url: BASE_URL,
     siteName: "James Gichia Portfolio",
     locale: "en_KE",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "James Gichia — Software Engineer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "James Gichia — Software Engineer",
     description:
       "Full-Stack Web Apps & Application Security. Based in Ruiru, Kenya.",
-    images: ["/og-image.png"],
     creator: "@jamesgichia",
   },
 };
