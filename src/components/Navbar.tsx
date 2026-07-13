@@ -43,40 +43,73 @@ export default function Navbar() {
           height: "64px",
         }}
       >
-        {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            textDecoration: "none",
-          }}
-        >
-          <div
+        {/* Left Section: Theme Toggle + Logo */}
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {/* Theme toggle (Always visible at top left) */}
+          <button
+            onClick={toggle}
+            id="theme-toggle-btn"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             style={{
-              width: "34px",
-              height: "34px",
+              background: "var(--bg-card)",
+              border: "1px solid var(--border)",
               borderRadius: "8px",
-              background: "linear-gradient(135deg, #A07B18, #E8C54A)",
+              padding: "7px",
+              cursor: "pointer",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              color: "var(--text-secondary)",
+              transition: "background 0.2s, border-color 0.2s, transform 0.15s",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-hover)";
+              (e.currentTarget as HTMLButtonElement).style.transform = "rotate(20deg)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border)";
+              (e.currentTarget as HTMLButtonElement).style.transform = "rotate(0deg)";
             }}
           >
-            <Terminal size={18} color="#fff" />
-          </div>
-          <span
+            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+          </button>
+
+          {/* Logo */}
+          <Link
+            href="/"
             style={{
-              fontWeight: 700,
-              fontSize: "1rem",
-              color: "var(--text-primary)",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              textDecoration: "none",
             }}
           >
-            jamesgichia
-            <span style={{ color: "var(--purple-400)" }}>.dev</span>
-          </span>
-        </Link>
+            <div
+              style={{
+                width: "34px",
+                height: "34px",
+                borderRadius: "8px",
+                background: "linear-gradient(135deg, #A07B18, #E8C54A)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Terminal size={18} color="#fff" />
+            </div>
+            <span
+              style={{
+                fontWeight: 700,
+                fontSize: "1rem",
+                color: "var(--text-primary)",
+              }}
+              className="hidden-mobile" /* Optional: Hide text on very small screens to save space */
+            >
+              jamesgichia
+              <span style={{ color: "var(--purple-400)" }}>.dev</span>
+            </span>
+          </Link>
+        </div>
 
         {/* Desktop links */}
         <div
@@ -110,34 +143,6 @@ export default function Navbar() {
           >
             Hire Me
           </SmartEmailLink>
-          {/* Theme toggle */}
-          <button
-            onClick={toggle}
-            id="theme-toggle-btn"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              padding: "7px",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "var(--text-secondary)",
-              transition: "background 0.2s, border-color 0.2s, transform 0.15s",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-hover)";
-              (e.currentTarget as HTMLButtonElement).style.transform = "rotate(20deg)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border)";
-              (e.currentTarget as HTMLButtonElement).style.transform = "rotate(0deg)";
-            }}
-          >
-            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
-          </button>
         </div>
 
         {/* Mobile hamburger */}
@@ -197,22 +202,6 @@ export default function Navbar() {
             >
               Hire Me
             </SmartEmailLink>
-            <button
-              onClick={toggle}
-              aria-label="Toggle theme"
-              style={{
-                background: "var(--bg-card)",
-                border: "1px solid var(--border)",
-                borderRadius: "8px",
-                padding: "7px",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                color: "var(--text-secondary)",
-              }}
-            >
-              {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
-            </button>
           </div>
         </div>
       )}
