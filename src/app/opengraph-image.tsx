@@ -17,7 +17,7 @@ export default function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          border: '12px solid #C9A227', // Antique Gold border
+          border: '12px solid #D4AF37', // Antique Gold border
           padding: '80px',
         }}
       >
@@ -29,7 +29,7 @@ export default function Image() {
             left: -200,
             width: 600,
             height: 600,
-            background: '#9A7820', // Aged gold
+            background: '#AA8222', // Aged gold
             borderRadius: '50%',
             filter: 'blur(120px)',
             opacity: 0.4,
@@ -54,7 +54,7 @@ export default function Image() {
         {/* Logo */}
         <div
           style={{
-            background: 'linear-gradient(135deg, #A07B18, #E8C54A)', // Gold gradient
+            background: 'linear-gradient(135deg, #AA8222, #FFE55C)', // Gold gradient
             borderRadius: '24px',
             width: '120px',
             height: '120px',
@@ -62,7 +62,7 @@ export default function Image() {
             alignItems: 'center',
             justifyContent: 'center',
             marginBottom: '40px',
-            boxShadow: '0 8px 32px rgba(201, 162, 39, 0.4)',
+            boxShadow: '0 8px 32px rgba(212, 175, 55, 0.4)',
           }}
         >
           <div
@@ -110,9 +110,9 @@ export default function Image() {
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
           <div
             style={{
-              color: '#E8C84A', // Bright champagne gold
-              background: 'rgba(201, 162, 39, 0.15)',
-              border: '2px solid rgba(201, 162, 39, 0.3)',
+              color: '#FFE55C', // Bright champagne gold
+              background: 'rgba(212, 175, 55, 0.15)',
+              border: '2px solid rgba(212, 175, 55, 0.3)',
               padding: '10px 24px',
               borderRadius: '999px',
               fontSize: 24,

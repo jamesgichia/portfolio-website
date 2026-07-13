@@ -89,7 +89,7 @@ export default function Navbar() {
                 width: "34px",
                 height: "34px",
                 borderRadius: "8px",
-                background: "linear-gradient(135deg, #A07B18, #E8C54A)",
+                background: "linear-gradient(135deg, #AA8222, #FFE55C)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

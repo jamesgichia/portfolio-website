@@ -95,15 +95,15 @@ export default function SkillsPage() {
                       <span style={{ fontSize: "0.88rem", color: "var(--text-primary)", fontWeight: 500 }}>{name}</span>
                       <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>{level}%</span>
                     </div>
-                    <div style={{ height: "7px", background: "rgba(201,162,39,0.12)", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(201,162,39,0.15)" }}>
+                    <div style={{ height: "7px", background: "rgba(212,175,55,0.15)", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(212,175,55,0.2)" }}>
                       <div
                         style={{
                           height: "100%",
                           width: `${level}%`,
-                          background: "linear-gradient(90deg, #A07B18, #C9A227, #22C55E)",
+                          background: "linear-gradient(90deg, #AA8222, #D4AF37, #22C55E)",
                           borderRadius: "4px",
                           transition: "width 1s ease",
-                          boxShadow: "0 0 8px rgba(201,162,39,0.4)",
+                          boxShadow: "0 0 8px rgba(212,175,55,0.5)",
                         }}
                       />
                     </div>

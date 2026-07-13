@@ -4,10 +4,10 @@
 
 /* ── "Old Money" Palette: Antique Gold + Forest Green ── */
 :root {
-  --gold-400: #E8C84A;    /* bright champagne gold  */
-  --gold-500: #C9A227;    /* antique gold           */
-  --gold-600: #9A7820;    /* aged gold              */
-  --gold-700: #7A6018;    /* dark antique gold      */
+  --gold-400: #FFE55C;    /* bright radiant gold    */
+  --gold-500: #D4AF37;    /* classic metallic gold  */
+  --gold-600: #AA8222;    /* rich deep gold         */
+  --gold-700: #7D5F14;    /* dark antique gold      */
   --green-400: #4ADE80;   /* bright emerald         */
   --green-500: #22C55E;   /* medium emerald         */
   --green-600: #16A34A;   /* forest green           */
@@ -17,7 +17,7 @@
   --purple-500: var(--gold-500);
   --purple-600: var(--gold-600);
   --purple-700: var(--gold-700);
-  --glow:       rgba(201, 162, 39, 0.4);
+  --glow:       rgba(212, 175, 55, 0.45);
   --glow-green: rgba(34,  197, 94, 0.3);
 }
 
@@ -29,23 +29,23 @@
   --bg-card:       #122017;          /* forest card                */
   --bg-card-hover: #192C1E;          /* hover, slightly lighter    */
   --bg-nav:        rgba(8, 14, 9, 0.92);
-  --border:        rgba(201, 162, 39, 0.14);
-  --border-hover:  rgba(201, 162, 39, 0.44);
+  --border:        rgba(212, 175, 55, 0.18);
+  --border-hover:  rgba(212, 175, 55, 0.55);
   --text-primary:  #F2EDD8;          /* antique ivory              */
   --text-secondary:#A8BEA0;          /* muted sage                 */
   --text-muted:    #4E6A54;          /* dark sage                  */
-  --blob-opacity:  0.12;
+  --blob-opacity:  0.15;
   --scrollbar-thumb: var(--gold-600);
-  --tag-bg:        rgba(201, 162, 39, 0.11);
+  --tag-bg:        rgba(212, 175, 55, 0.12);
   --tag-color:     var(--gold-400);
-  --tag-border:    rgba(201, 162, 39, 0.28);
+  --tag-border:    rgba(212, 175, 55, 0.35);
   --tag-green-bg:  rgba(34, 197, 94, 0.10);
   --tag-green-color: #4ADE80;
   --tag-green-border: rgba(34, 197, 94, 0.28);
   /* "In Development" → amber-gold */
-  --tag-blue-bg:   rgba(201, 162, 39, 0.11);
-  --tag-blue-color: #E8C84A;
-  --tag-blue-border: rgba(201, 162, 39, 0.28);
+  --tag-blue-bg:   rgba(212, 175, 55, 0.12);
+  --tag-blue-color: #FFE55C;
+  --tag-blue-border: rgba(212, 175, 55, 0.35);
 }
 
 /* ── Light Mode — Parchment / Ivory + Forest Green ── */
@@ -62,16 +62,16 @@
   --text-muted:    #5A7A62;          /* sage                       */
   --blob-opacity:  0.07;
   --scrollbar-thumb: var(--gold-500);
-  --tag-bg:        rgba(154, 120, 32, 0.09);
-  --tag-color:     #7A6018;
-  --tag-border:    rgba(154, 120, 32, 0.28);
+  --tag-bg:        rgba(170, 130, 34, 0.12);
+  --tag-color:     #7D5F14;
+  --tag-border:    rgba(170, 130, 34, 0.35);
   --tag-green-bg:  rgba(22, 163, 74, 0.08);
   --tag-green-color: #15803D;
   --tag-green-border: rgba(22, 163, 74, 0.3);
   /* "In Development" → amber-gold */
-  --tag-blue-bg:   rgba(154, 120, 32, 0.09);
-  --tag-blue-color: #7A6018;
-  --tag-blue-border: rgba(154, 120, 32, 0.28);
+  --tag-blue-bg:   rgba(170, 130, 34, 0.12);
+  --tag-blue-color: #7D5F14;
+  --tag-blue-border: rgba(170, 130, 34, 0.35);
 }
 
 * {
@@ -95,7 +95,7 @@ code, pre {
 }
 
 ::selection {
-  background: rgba(201, 162, 39, 0.30);
+  background: rgba(212, 175, 55, 0.35);
   color: #0A1A0D;
 }
 
@@ -106,11 +106,11 @@ code, pre {
 
 /* Glow utilities */
 .glow-gold {
-  box-shadow: 0 0 30px var(--glow), 0 0 60px rgba(201, 162, 39, 0.1);
+  box-shadow: 0 0 30px var(--glow), 0 0 60px rgba(212, 175, 55, 0.15);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #E8C84A 0%, #9A7820 45%, #C9A227 100%);
+  background: linear-gradient(135deg, #FFE55C 0%, #D4AF37 50%, #AA8222 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -142,7 +142,7 @@ code, pre {
 
 .bg-blob-1 {
   width: 600px; height: 600px;
-  background: radial-gradient(circle, #9A7820, transparent);
+  background: radial-gradient(circle, #D4AF37, transparent);
   top: -200px; left: -200px;
   animation: float1 20s ease-in-out infinite;
 }
@@ -189,25 +189,23 @@ code, pre {
 
 /* Buttons */
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--purple-600), var(--purple-500));
-  color: #fff;
+  background: var(--gold-500);
+  color: #080E09;
   font-weight: 600;
   font-size: 0.9rem;
   padding: 12px 24px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.2s, box-shadow 0.3s, transform 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
-  box-shadow: 0 8px 30px rgba(201, 162, 39, 0.5);
+  background: var(--gold-400);
   transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
 }
 
 .btn-outline {
@@ -230,6 +228,11 @@ code, pre {
   background: rgba(201, 162, 39, 0.1);
   box-shadow: 0 4px 20px rgba(201, 162, 39, 0.25);
   transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(212, 175, 55, 0.15);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
 }
 
 /* Section headings */
