@@ -46,6 +46,11 @@
   --tag-blue-bg:   rgba(212, 175, 55, 0.12);
   --tag-blue-color: #FFE55C;
   --tag-blue-border: rgba(212, 175, 55, 0.35);
+
+  /* Text Gradient Dark Mode */
+  --text-gradient-1: #FFE55C;
+  --text-gradient-2: #D4AF37;
+  --text-gradient-3: #AA8222;
 }
 
 /* ── Light Mode — Parchment / Ivory + Forest Green ── */
@@ -72,6 +77,17 @@
   --tag-blue-bg:   rgba(170, 130, 34, 0.12);
   --tag-blue-color: #7D5F14;
   --tag-blue-border: rgba(170, 130, 34, 0.35);
+
+  /* Override text accent colours to be darker for readability on light backgrounds */
+  --purple-400: var(--gold-700);  /* Dark antique gold */
+  --purple-500: var(--gold-700);
+  --purple-600: #5A420B;          /* Deep brown-gold */
+  --purple-700: #3E2D08;
+
+  /* Text Gradient Light Mode (High Contrast) */
+  --text-gradient-1: #AA8222;
+  --text-gradient-2: #7D5F14;
+  --text-gradient-3: #5A420B;
 }
 
 * {
@@ -110,7 +126,7 @@ code, pre {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #FFE55C 0%, #D4AF37 50%, #AA8222 100%);
+  background: linear-gradient(135deg, var(--text-gradient-1) 0%, var(--text-gradient-2) 50%, var(--text-gradient-3) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -225,8 +241,8 @@ code, pre {
 }
 
 .btn-outline:hover {
-  background: rgba(201, 162, 39, 0.1);
-  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.25);
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
   transform: translateY(-1px);
 }
 
