@@ -23,13 +23,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Read saved preference, else fall back to system preference
+    // Read saved preference, else default to dark mode
     const saved = localStorage.getItem("portfolio-theme") as Theme | null;
     if (saved === "light" || saved === "dark") {
       setTheme(saved);
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
+      setTheme("dark");
     }
     setMounted(true);
   }, []);
