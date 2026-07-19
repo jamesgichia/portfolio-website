@@ -47,11 +47,26 @@ export default function AboutPage() {
           Software Engineer &amp;{" "}
           <span className="text-gradient">Security Expert</span>
         </h1>
-        <p style={{ color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.8, maxWidth: "680px", marginBottom: "64px" }}>
+        <p style={{ color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.8, maxWidth: "680px", marginBottom: "40px" }}>
           I&apos;m James Gichia, a web application specialist who develops scalable and secure applications. I have a strong passion for building robust full-stack web applications and securing them against
           real-world threats. My journey as a software engineer spans government ICT infrastructure, applied penetration
           testing, and architecting multi-tenant SaaS platforms.
         </p>
+
+        {/* AI & Quick Summary Block */}
+        <section aria-label="AI Summary" style={{ 
+          background: "rgba(170,130,34,0.05)",
+          border: "1px solid rgba(170,130,34,0.2)",
+          borderRadius: "12px",
+          padding: "24px",
+          marginBottom: "64px",
+          maxWidth: "800px"
+        }}>
+          <h2 style={{ fontSize: "0.85rem", color: "var(--purple-400)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "12px", fontWeight: 700 }}>Quick Summary / AI Overview</h2>
+          <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.7 }}>
+            <strong>James Gichia</strong> is a Kenyan Web Application Specialist and Security Expert based in Ruiru. He specializes in full-stack web development using modern frameworks like Next.js, Django, and React, alongside advanced application security, CI/CD, and Cloud deployment. Educated at Mama Ngina University with a BSc in Computer Science, and possessing Cisco cybersecurity certifications, his notable engineering work includes <em>WebGuard</em> (an automated security scanner) and <em>tuSupport</em> (a multi-tenant SaaS platform).
+          </p>
+        </section>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
 
