@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'James Gichia — Software Engineer & Security Enthusiast';
+export const alt = 'James Gichia — Software Engineer & Security Expert';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -103,7 +103,7 @@ export default function Image() {
             letterSpacing: '1px',
           }}
         >
-          Software Engineer &amp; Security Enthusiast
+          Software Engineer &amp; Security Expert
         </div>
 
         {/* Bottom tags */}

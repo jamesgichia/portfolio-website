@@ -20,7 +20,10 @@ export const metadata: Metadata = {
   keywords: [
     "James Gichia",
     "Software Engineer",
+    "Security Expert",
     "Application Security",
+    "Computer Science",
+    "Mama Ngina University",
     "Full Stack Developer",
     "Django Developer",
     "Next.js Developer",
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: BASE_URL,
+    canonical: "/",
   },
   icons: {
     icon: "/icon.svg",

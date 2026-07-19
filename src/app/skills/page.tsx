@@ -1,6 +1,16 @@
-export const metadata = {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Skills",
   description: "Technical skills of James Gichia — Python, Django, Next.js, PostgreSQL, Docker, OWASP security testing, Burp Suite, and more.",
+  alternates: {
+    canonical: "/skills",
+  },
+  openGraph: {
+    title: "Skills | James Gichia",
+    description: "Technical skills of James Gichia — Python, Django, Next.js, PostgreSQL, Docker, OWASP security testing, Burp Suite, and more.",
+    url: "/skills",
+  },
 };
 
 const skillGroups = [
@@ -60,6 +70,25 @@ const skillGroups = [
       { name: "Nmap & Recon Workflows", level: 76 },
     ],
   },
+  {
+    category: "Cloud & DevOps",
+    skills: [
+      { name: "AWS / Google Cloud Platform", level: 75 },
+      { name: "CI/CD (GitHub Actions)", level: 80 },
+      { name: "Linux Server Administration", level: 85 },
+      { name: "Containerization Orchestration", level: 78 },
+    ],
+  },
+  {
+    category: "Professional & Soft Skills",
+    skills: [
+      { name: "System Architecture & Design", level: 85 },
+      { name: "Complex Problem Solving", level: 90 },
+      { name: "Agile / Scrum Methodologies", level: 80 },
+      { name: "Technical Communication", level: 85 },
+      { name: "Cross-Functional Collaboration", level: 88 },
+    ],
+  },
 ];
 
 const platforms = [
@@ -72,13 +101,13 @@ export default function SkillsPage() {
   return (
     <div style={{ paddingTop: "64px" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
-        <p className="section-label">Capabilities</p>
+        <p className="section-label">James Gichia&apos;s Capabilities</p>
         <h1 className="section-title">
-          Technical <span className="text-gradient">Skills</span>
+          Software Engineering &amp; Security <span className="text-gradient">Skills</span>
         </h1>
         <p style={{ color: "var(--text-secondary)", fontSize: "1rem", maxWidth: "560px", marginBottom: "60px", lineHeight: 1.75 }}>
-          My core competencies span full-stack development, database engineering, and application
-          security — built through projects, coursework, and hands-on lab training.
+          My core competencies as a web application specialist span full-stack development, database engineering, and application
+          security — built through extensive architectural design, real-world projects, and hands-on lab training.
         </p>
 
         {/* Skill bars */}

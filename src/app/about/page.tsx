@@ -1,25 +1,55 @@
+import { Metadata } from "next";
 import { GraduationCap, Briefcase, Award, Users } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About",
-  description: "Learn about James Gichia — CS student at Mama Ngina University, ICT Authority intern, Cisco-certified, and security researcher based in Ruiru, Kenya.",
+  description: "Learn about James Gichia — Web Application Specialist, Cisco-certified, and security expert based in Ruiru, Kenya.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About | James Gichia",
+    description: "Learn about James Gichia — Web Application Specialist, Cisco-certified, and security expert based in Ruiru, Kenya.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    dateCreated: "2024-01-01T12:00:00+00:00",
+    dateModified: new Date().toISOString(),
+    mainEntity: {
+      "@type": "Person",
+      name: "James Gichia",
+      alternateName: "jamesgichia",
+      description: "Web application specialist who develops scalable and secure applications, Software Engineer, and Security Expert.",
+      image: "https://jamesgichia.vercel.app/og-image.png",
+      sameAs: [
+        "https://github.com/jamesgichia",
+        "https://linkedin.com/in/jamesgichia"
+      ]
+    }
+  };
+
   return (
     <div style={{ paddingTop: "64px" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
 
         {/* Header */}
-        <p className="section-label">About Me</p>
+        <p className="section-label">About James Gichia</p>
         <h1 className="section-title" style={{ maxWidth: "700px" }}>
-          Building Secure Software,{" "}
-          <span className="text-gradient">One Layer at a Time</span>
+          Software Engineer &amp;{" "}
+          <span className="text-gradient">Security Expert</span>
         </h1>
         <p style={{ color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.8, maxWidth: "680px", marginBottom: "64px" }}>
-          I&apos;m a Computer Science student at Mama Ngina University (graduating December 2026)
-          with a passion for building robust full-stack applications and securing them against
-          real-world threats. My journey spans government ICT infrastructure, applied penetration
+          I&apos;m James Gichia, a web application specialist who develops scalable and secure applications. I have a strong passion for building robust full-stack web applications and securing them against
+          real-world threats. My journey as a software engineer spans government ICT infrastructure, applied penetration
           testing, and architecting multi-tenant SaaS platforms.
         </p>
 
@@ -37,7 +67,7 @@ export default function AboutPage() {
                 Mama Ngina University, Kenya
               </p>
               <p style={{ color: "var(--text-muted)", fontSize: "0.82rem", marginBottom: "16px" }}>
-                Expected December 2026
+                BSc Program
               </p>
               <p style={{ color: "var(--text-secondary)", fontSize: "0.88rem", lineHeight: 1.7 }}>
                 Relevant coursework: Computer Systems Security, Computer Networks, Advanced Database Systems, 

@@ -76,8 +76,7 @@ export default function HomePage() {
           >
             I build <strong style={{ color: "var(--text-primary)" }}>full-stack web applications</strong> with
             Django and Next.js, with a specialisation in{" "}
-            <strong style={{ color: "var(--purple-400)" }}>application security</strong>. Currently
-            building personal projects.
+            <strong style={{ color: "var(--purple-400)" }}>application security</strong>. I am a web application specialist who develops scalable and secure applications, building <Link href="/projects" style={{ textDecoration: "underline", color: "var(--text-primary)" }}>innovative software solutions</Link>.
           </p>
 
           {/* CTA buttons */}

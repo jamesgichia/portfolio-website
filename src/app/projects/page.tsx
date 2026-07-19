@@ -1,9 +1,18 @@
+import { Metadata } from "next";
 import { GithubIcon } from "@/components/GithubIcon";
 import { ExternalLink } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Projects",
   description: "Portfolio projects by James Gichia — WebGuard (automated security scanner), tuSupport (multi-tenant SaaS), and Firewall Rules Optimizer. Django, Next.js, Python.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    title: "Projects | James Gichia",
+    description: "Portfolio projects by James Gichia — WebGuard (automated security scanner), tuSupport (multi-tenant SaaS), and Firewall Rules Optimizer. Django, Next.js, Python.",
+    url: "/projects",
+  },
 };
 
 const projects = [
@@ -79,8 +88,28 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: projects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "SoftwareApplication",
+        name: project.title,
+        description: project.description,
+        applicationCategory: "DeveloperApplication",
+        url: project.live || project.github,
+      },
+    })),
+  };
+
   return (
     <div style={{ paddingTop: "64px" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
         <p className="section-label">Portfolio</p>
         <h1 className="section-title">
