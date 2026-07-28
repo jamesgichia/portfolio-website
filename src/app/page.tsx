@@ -8,6 +8,7 @@ import {
   Server,
   ArrowRight,
   MapPin,
+  FileText,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -83,6 +84,14 @@ export default function HomePage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginBottom: "60px" }}>
             <Link href="/projects" className="btn-primary" id="hero-view-projects">
               View My Projects <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/cv"
+              className="btn-outline"
+              id="hero-view-cv"
+              style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
+            >
+              <FileText size={16} /> View CV
             </Link>
             <Link href="/contact" className="btn-outline" id="hero-contact">
               Get In Touch
