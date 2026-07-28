@@ -266,60 +266,8 @@ export default function CVPage() {
             </div>
           )}
         </div>
-
-        {/* Bottom copy-link nudge */}
-        <div
-          style={{
-            marginTop: "24px",
-            padding: "16px 20px",
-            borderRadius: "12px",
-            background: "rgba(212,175,55,0.06)",
-            border: "1px solid rgba(212,175,55,0.18)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "12px",
-          }}
-        >
-          <p style={{ color: "var(--text-secondary)", fontSize: "0.88rem" }}>
-            <strong style={{ color: "var(--text-primary)" }}>Share this page</strong>{" "}
-            — paste the link in your LinkedIn bio, email signature, or anywhere
-            you want recruiters to see your CV.
-          </p>
-          <button
-            onClick={handleCopyLink}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "6px",
-              background: "transparent",
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              padding: "8px 16px",
-              color: "var(--purple-400)",
-              fontSize: "0.82rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              fontFamily: "inherit",
-              transition: "all 0.2s ease",
-            }}
-            id="cv-copy-link-nudge"
-          >
-            {copied ? (
-              <>
-                <Check size={14} color="var(--green-400)" />
-                <span style={{ color: "var(--green-400)" }}>Copied!</span>
-              </>
-            ) : (
-              <>
-                <Link2 size={14} />
-                {SHARE_URL}
-              </>
-            )}
-          </button>
-        </div>
       </section>
+
     </div>
   );
 }
