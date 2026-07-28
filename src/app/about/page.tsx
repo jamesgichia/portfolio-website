@@ -62,7 +62,7 @@ export default function AboutPage() {
           marginBottom: "64px",
           maxWidth: "800px"
         }}>
-          <h2 style={{ fontSize: "0.85rem", color: "var(--purple-400)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "12px", fontWeight: 700 }}>Quick Summary / AI Overview</h2>
+          <h2 style={{ fontSize: "0.85rem", color: "var(--purple-400)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "12px", fontWeight: 700 }}>Profile</h2>
           <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.7 }}>
             <strong>James Gichia</strong> is a Kenyan Web Application Specialist and Security Expert based in Ruiru. He specializes in full-stack web development using modern frameworks like Next.js, Django, and React, alongside advanced application security, CI/CD, and Cloud deployment. Educated at Mama Ngina University with a BSc in Computer Science, and possessing Cisco cybersecurity certifications, his notable engineering work includes <em>WebGuard</em> (an automated security scanner) and <em>tuSupport</em> (a multi-tenant SaaS platform).
           </p>

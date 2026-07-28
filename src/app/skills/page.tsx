@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import AnimatedSkillBars from "@/components/AnimatedSkillBars";
 
 export const metadata: Metadata = {
   title: "Skills",
@@ -103,45 +104,15 @@ export default function SkillsPage() {
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "80px 24px" }}>
         <p className="section-label">James Gichia&apos;s Capabilities</p>
         <h1 className="section-title">
-          Software Engineering &amp; Security <span className="text-gradient">Skills</span>
+          Software Engineering & Security <span className="text-gradient">Skills</span>
         </h1>
         <p style={{ color: "var(--text-secondary)", fontSize: "1rem", maxWidth: "560px", marginBottom: "60px", lineHeight: 1.75 }}>
           My core competencies as a web application specialist span full-stack development, database engineering, and application
           security — built through extensive architectural design, real-world projects, and hands-on lab training.
         </p>
 
-        {/* Skill bars */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "32px" }}>
-          {skillGroups.map(({ category, skills }) => (
-            <div key={category}>
-              <h2 style={{ fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--green-500)", marginBottom: "20px" }}>
-                {category}
-              </h2>
-              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                {skills.map(({ name, level }) => (
-                  <div key={name}>
-                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px" }}>
-                      <span style={{ fontSize: "0.88rem", color: "var(--text-primary)", fontWeight: 500 }}>{name}</span>
-                      <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>{level}%</span>
-                    </div>
-                    <div style={{ height: "7px", background: "rgba(212,175,55,0.15)", borderRadius: "4px", overflow: "hidden", border: "1px solid rgba(212,175,55,0.2)" }}>
-                      <div
-                        style={{
-                          height: "100%",
-                          width: `${level}%`,
-                          background: "linear-gradient(90deg, #AA8222, #D4AF37, #22C55E)",
-                          borderRadius: "4px",
-                          transition: "width 1s ease",
-                          boxShadow: "0 0 8px rgba(212,175,55,0.5)",
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Animated skill bars — client component */}
+        <AnimatedSkillBars skillGroups={skillGroups} />
 
         {/* Training platforms */}
         <div style={{ marginTop: "80px" }}>

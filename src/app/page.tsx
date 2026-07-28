@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SocialRow } from "@/components/SocialRow";
 import { GithubIcon } from "@/components/GithubIcon";
+import ScrollReveal from "@/components/ScrollReveal";
 import {
   ExternalLink,
   Shield,
@@ -146,28 +147,30 @@ export default function HomePage() {
               title: "Application Security",
               desc: "OWASP Top 10 assessment, Burp Suite testing, secure auth design (JWT), and building security automation tools like WebGuard.",
             },
-          ].map(({ icon, title, desc }) => (
-            <div key={title} className="card" style={{ padding: "28px" }}>
-              <div
-                style={{
-                  width: "52px",
-                  height: "52px",
-                  borderRadius: "12px",
-                  background: "rgba(22,101,52,0.12)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "20px",
-                  border: "1px solid rgba(22,101,52,0.22)",
-                }}
-              >
-                {icon}
+          ].map(({ icon, title, desc }, i) => (
+            <ScrollReveal key={title} delay={i * 100}>
+              <div className="card" style={{ padding: "28px", height: "100%" }}>
+                <div
+                  style={{
+                    width: "52px",
+                    height: "52px",
+                    borderRadius: "12px",
+                    background: "rgba(22,101,52,0.12)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "20px",
+                    border: "1px solid rgba(22,101,52,0.22)",
+                  }}
+                >
+                  {icon}
+                </div>
+                <h3 style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "10px", color: "var(--text-primary)" }}>
+                  {title}
+                </h3>
+                <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, fontSize: "0.92rem" }}>{desc}</p>
               </div>
-              <h3 style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "10px", color: "var(--text-primary)" }}>
-                {title}
-              </h3>
-              <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, fontSize: "0.92rem" }}>{desc}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -217,27 +220,29 @@ export default function HomePage() {
               tags: ["Python", "Linux", "iptables", "Security"],
               github: "https://github.com/jamesgichia/firewall_rules_optimizer",
             },
-          ].map(({ title, status, statusColor, desc, tags, github }) => (
-            <div key={title} className="card" style={{ padding: "28px", display: "flex", flexDirection: "column" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-                <h3 style={{ fontWeight: 700, fontSize: "1.1rem", color: "var(--text-primary)" }}>{title}</h3>
-                <span className={`tag tag-${statusColor}`}>{status}</span>
+          ].map(({ title, status, statusColor, desc, tags, github }, i) => (
+            <ScrollReveal key={title} delay={i * 120}>
+              <div className="card" style={{ padding: "28px", display: "flex", flexDirection: "column", height: "100%" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
+                  <h3 style={{ fontWeight: 700, fontSize: "1.1rem", color: "var(--text-primary)" }}>{title}</h3>
+                  <span className={`tag tag-${statusColor}`}>{status}</span>
+                </div>
+                <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.7, flex: 1, marginBottom: "20px" }}>
+                  {desc}
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "20px" }}>
+                  {tags.map((t) => <span key={t} className="tag">{t}</span>)}
+                </div>
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--purple-400)", textDecoration: "none", fontSize: "0.85rem", fontWeight: 600 }}
+                >
+                  <GithubIcon size={15} color="var(--purple-400)" /> View on GitHub <ExternalLink size={13} />
+                </a>
               </div>
-              <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.7, flex: 1, marginBottom: "20px" }}>
-                {desc}
-              </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "20px" }}>
-                {tags.map((t) => <span key={t} className="tag">{t}</span>)}
-              </div>
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--purple-400)", textDecoration: "none", fontSize: "0.85rem", fontWeight: 600 }}
-              >
-                <GithubIcon size={15} color="var(--purple-400)" /> View on GitHub <ExternalLink size={13} />
-              </a>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
