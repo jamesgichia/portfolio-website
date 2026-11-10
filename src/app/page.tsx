@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SocialRow } from "@/components/SocialRow";
 import { GithubIcon } from "@/components/GithubIcon";
@@ -49,6 +50,25 @@ export default function HomePage() {
             </span>
           </div>
 
+          {/* Profile photo */}
+          <Image
+            src="/IMG-20261109-WA2101.jpg"
+            alt="James Gichia"
+            width={160}
+            height={160}
+            priority
+            style={{
+              width: "clamp(112px, 24vw, 160px)",
+              height: "clamp(112px, 24vw, 160px)",
+              objectFit: "cover",
+              objectPosition: "center",
+              borderRadius: "50%",
+              border: "3px solid var(--purple-400)",
+              marginBottom: "28px",
+              boxShadow: "0 0 32px rgba(170,130,34,0.2)",
+            }}
+          />
+
           {/* Headline */}
           <h1
             style={{
@@ -78,7 +98,11 @@ export default function HomePage() {
           >
             I build <strong style={{ color: "var(--text-primary)" }}>full-stack web applications</strong> with
             Django and Next.js, with a specialisation in{" "}
-            <strong style={{ color: "var(--purple-400)" }}>application security</strong>. I am a web application specialist who develops scalable and secure applications, building <Link href="/projects" style={{ textDecoration: "underline", color: "var(--text-primary)" }}>innovative software solutions</Link>.
+            <strong style={{ color: "var(--purple-400)" }}>application security</strong>. I am a web application
+            specialist who develops scalable and secure applications, building{" "}
+            <Link href="/projects" style={{ textDecoration: "underline", color: "var(--text-primary)" }}>
+              innovative software solutions
+            </Link>.
           </p>
 
           {/* CTA buttons */}
